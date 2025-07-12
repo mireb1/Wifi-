@@ -1,0 +1,4 @@
+Flask
+routeros-api
+python-dotenv
+gunicorn

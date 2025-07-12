@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votre Code Voucher - {{ platform_name }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Paiement Réussi !</h1>
+        </header>
+
+        <main class="voucher-display">
+            <p>Voici votre code d'accès Wi-Fi :</p>
+            <div class="voucher-code">
+                <p><strong>Utilisateur :</strong> {{ code }}</p>
+                <p><strong>Mot de passe :</strong> {{ code }}</p>
+            </div>
+            <p>Utilisez ce code sur le portail de connexion Hotspot.</p>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 {{ platform_name }}</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+# Fichiers d'environnement
+.env
+
+# Fichiers de cache Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Dossier d'environnement virtuel
+.venv
+venv/
+env/
+
+# Fichiers de l'éditeur/IDE
+.vscode/
+.idea/

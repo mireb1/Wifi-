@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ platform_name }} - Accueil</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo {{ platform_name }}" class="logo">
+            <h1>Bienvenue sur {{ platform_name }}</h1>
+            <p>Choisissez un forfait pour vous connecter</p>
+        </header>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="flash-messages">
+                {% for category, message in messages %}
+                    <div class="flash {{ category }}">{{ message }}</div>
+                {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+
+        <main class="packages">
+            {% for id, package in packages.items() %}
+            <div class="package">
+                <h2>{{ package.name }}</h2>
+                <p class="price">{{ package.price }} FC</p>
+                <a href="{{ url_for('buy', package_id=id) }}" class="buy-button">Acheter</a>
+            </div>
+            {% endfor %}
+        </main>
+
+        <footer>
+            <p>&copy; 2025 {{ platform_name }}</p>
+        </footer>
+    </div>
+</body>
+</html>

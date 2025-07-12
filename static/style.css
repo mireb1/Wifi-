@@ -1,0 +1,121 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+}
+
+.logo {
+    max-width: 150px;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #1a73e8;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2em;
+    color: #5f6368;
+}
+
+.packages {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.package {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 200px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.package:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.package h2 {
+    font-size: 1.5em;
+    margin-top: 0;
+}
+
+.package .price {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #1a73e8;
+    margin: 20px 0;
+}
+
+.buy-button {
+    display: inline-block;
+    background-color: #1a73e8;
+    color: #fff;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.buy-button:hover {
+    background-color: #155ab6;
+}
+
+.flash-messages {
+    margin: 20px 0;
+}
+
+.flash {
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.flash.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.voucher-display {
+    margin-top: 40px;
+}
+
+.voucher-code {
+    background-color: #e8f0fe;
+    border: 2px dashed #1a73e8;
+    padding: 20px;
+    margin: 20px auto;
+    display: inline-block;
+    font-size: 1.5em;
+    border-radius: 8px;
+}
+
+footer {
+    margin-top: 40px;
+    color: #888;
+    font-size: 0.9em;
+}
